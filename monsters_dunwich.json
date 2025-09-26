@@ -1,0 +1,184 @@
+{
+  "expansion": "Dunwich",
+  "monsters": [
+    {
+      "name": "Dunwich Ghoul",
+      "expansion": "Dunwich",
+      "awareness": -1,
+      "horror": {
+        "modifier": -1,
+        "sanity_damage": 1
+      },
+      "combat": {
+        "modifier": 0,
+        "stamina_damage": 1
+      },
+      "toughness": 1,
+      "movement": "Normal",
+      "special": [
+        "Undead"
+      ],
+      "token_size": "small",
+      "border_color": "green",
+      "monster_type": "undead",
+      "dimension": "crescent",
+      "frequency": 3,
+      "source": "community/compilation (verify expansion)",
+      "art_asset": "dunwich_ghoul.png"
+    },
+    {
+      "name": "Nightgaunt",
+      "expansion": "Dunwich",
+      "awareness": -2,
+      "horror": {
+        "modifier": -2,
+        "sanity_damage": 1
+      },
+      "combat": {
+        "modifier": -3,
+        "stamina_damage": 1
+      },
+      "toughness": 1,
+      "movement": "Flying",
+      "special": [
+        "Carries investigators to Other Worlds",
+        "Nightmarish(1)"
+      ],
+      "token_size": "small",
+      "border_color": "white",
+      "monster_type": "flying_beast",
+      "dimension": "hexagon",
+      "frequency": 2,
+      "source": "community/compilation (verify expansion)",
+      "art_asset": "nightgaunt_dunwich.png"
+    },
+    {
+      "name": "Formless Spawn",
+      "expansion": "Dunwich",
+      "awareness": -2,
+      "horror": {
+        "modifier": -2,
+        "sanity_damage": 2
+      },
+      "combat": {
+        "modifier": -4,
+        "stamina_damage": 3
+      },
+      "toughness": 3,
+      "movement": "Normal",
+      "special": [
+        "Physical Resistance",
+        "Magical Resistance"
+      ],
+      "token_size": "large",
+      "border_color": "black",
+      "monster_type": "amorphous",
+      "dimension": "triangle",
+      "frequency": 1,
+      "source": "community/compilation (verify expansion)",
+      "art_asset": "formless_spawn_dunwich.png"
+    },
+    {
+      "name": "Child of the Goat",
+      "expansion": "Dunwich",
+      "awareness": -1,
+      "horror": {
+        "modifier": -1,
+        "sanity_damage": 2
+      },
+      "combat": {
+        "modifier": -2,
+        "stamina_damage": 2
+      },
+      "toughness": 2,
+      "movement": "Fast",
+      "special": [
+        "Spawn"
+      ],
+      "token_size": "medium",
+      "border_color": "yellow",
+      "monster_type": "cultist",
+      "dimension": "circle",
+      "frequency": 2,
+      "source": "community/compilation (verify expansion)",
+      "art_asset": "child_goat_dunwich.png"
+    },
+    {
+      "name": "Servant of Glaaki",
+      "expansion": "Dunwich",
+      "awareness": -1,
+      "horror": {
+        "modifier": -2,
+        "sanity_damage": 1
+      },
+      "combat": {
+        "modifier": -2,
+        "stamina_damage": 2
+      },
+      "toughness": 2,
+      "movement": "Slow",
+      "special": [
+        "Endless",
+        "Summons"
+      ],
+      "token_size": "medium",
+      "border_color": "green",
+      "monster_type": "servitor",
+      "dimension": "crescent",
+      "frequency": 2,
+      "source": "community/compilation (verify expansion)",
+      "art_asset": "servant_glaaki.png"
+    },
+    {
+      "name": "The Beast",
+      "expansion": "Dunwich",
+      "awareness": -3,
+      "horror": {
+        "modifier": -4,
+        "sanity_damage": 3
+      },
+      "combat": {
+        "modifier": -6,
+        "stamina_damage": 4
+      },
+      "toughness": 6,
+      "movement": "Stalker",
+      "special": [
+        "Unique",
+        "Overwhelming(2)"
+      ],
+      "token_size": "huge",
+      "border_color": "black",
+      "monster_type": "entity",
+      "dimension": "triangle",
+      "frequency": 1,
+      "source": "community/compilation (verify expansion)",
+      "art_asset": "the_beast_dunwich.png"
+    },
+    {
+      "name": "Tcho-tcho",
+      "expansion": "Dunwich",
+      "awareness": -1,
+      "horror": {
+        "modifier": -1,
+        "sanity_damage": 1
+      },
+      "combat": {
+        "modifier": -1,
+        "stamina_damage": 1
+      },
+      "toughness": 1,
+      "movement": "Normal",
+      "special": [
+        "Cultist allied"
+      ],
+      "token_size": "small",
+      "border_color": "green",
+      "monster_type": "humanoid",
+      "dimension": "crescent",
+      "frequency": 3,
+      "source": "community/compilation (verify expansion)",
+      "art_asset": "tcho_tcho_dunwich.png"
+    }
+  ]
+}
