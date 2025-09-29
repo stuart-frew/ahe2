@@ -1,0 +1,109 @@
+{
+  "expansion": "Kingsport",
+  "monsters": [
+    {
+      "name": "Lloigor",
+      "expansion": "Kingsport",
+      "awareness": -3,
+      "horror": {
+        "modifier": -4,
+        "sanity_damage": 3
+      },
+      "combat": {
+        "modifier": -5,
+        "stamina_damage": 3
+      },
+      "toughness": 4,
+      "movement": "Flying",
+      "special": [
+        "Magical Immunity",
+        "Physical Resistance",
+        "Overwhelming(2)"
+      ],
+      "token_size": "large",
+      "border_color": "white",
+      "monster_type": "eldritch",
+      "dimension": "hexagon",
+      "frequency": 1,
+      "source": "community/compilation (verify expansion)",
+      "art_asset": "llogior_kingsport.png"
+    },
+    {
+      "name": "Servitor of the Outer Gods",
+      "expansion": "Kingsport",
+      "awareness": -2,
+      "horror": {
+        "modifier": -3,
+        "sanity_damage": 2
+      },
+      "combat": {
+        "modifier": -4,
+        "stamina_damage": 2
+      },
+      "toughness": 3,
+      "movement": "Flying",
+      "special": [
+        "Endless",
+        "Nightmarish(1)"
+      ],
+      "token_size": "medium",
+      "border_color": "white",
+      "monster_type": "servitor",
+      "dimension": "hexagon",
+      "frequency": 2,
+      "source": "community/compilation (verify expansion)",
+      "art_asset": "servitor_kingsport.png"
+    },
+    {
+      "name": "Werewolf",
+      "expansion": "Kingsport",
+      "awareness": -2,
+      "horror": {
+        "modifier": -3,
+        "sanity_damage": 2
+      },
+      "combat": {
+        "modifier": -4,
+        "stamina_damage": 2
+      },
+      "toughness": 3,
+      "movement": "Fast",
+      "special": [
+        "Stalker",
+        "Ambush"
+      ],
+      "token_size": "medium",
+      "border_color": "yellow",
+      "monster_type": "beast",
+      "dimension": "circle",
+      "frequency": 2,
+      "source": "community/compilation (verify expansion)",
+      "art_asset": "werewolf_kingsport.png"
+    },
+    {
+      "name": "Skinless One",
+      "expansion": "Kingsport",
+      "awareness": -2,
+      "horror": {
+        "modifier": -3,
+        "sanity_damage": 2
+      },
+      "combat": {
+        "modifier": -5,
+        "stamina_damage": 3
+      },
+      "toughness": 4,
+      "movement": "Fast",
+      "special": [
+        "Unique"
+      ],
+      "token_size": "large",
+      "border_color": "black",
+      "monster_type": "aberration",
+      "dimension": "triangle",
+      "frequency": 1,
+      "source": "community/compilation (verify expansion)",
+      "art_asset": "skinless_one_kingsport.png"
+    }
+  ]
+}

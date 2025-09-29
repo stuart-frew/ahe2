@@ -1,0 +1,58 @@
+{
+  "expansion": "Pharaoh",
+  "monsters": [
+    {
+      "name": "Mummy",
+      "expansion": "Pharaoh",
+      "awareness": -2,
+      "horror": {
+        "modifier": -2,
+        "sanity_damage": 1
+      },
+      "combat": {
+        "modifier": -3,
+        "stamina_damage": 2
+      },
+      "toughness": 2,
+      "movement": "Slow",
+      "special": [
+        "Undead",
+        "Curse"
+      ],
+      "token_size": "medium",
+      "border_color": "green",
+      "monster_type": "undead",
+      "dimension": "crescent",
+      "frequency": 3,
+      "source": "community/compilation (verify expansion)",
+      "art_asset": "mummy_pharaoh.png"
+    },
+    {
+      "name": "Dark Pharaoh",
+      "expansion": "Pharaoh",
+      "awareness": -2,
+      "horror": {
+        "modifier": -3,
+        "sanity_damage": 2
+      },
+      "combat": {
+        "modifier": -4,
+        "stamina_damage": 2
+      },
+      "toughness": 3,
+      "movement": "Stalker",
+      "special": [
+        "Unique",
+        "Curse",
+        "Physical Resistance"
+      ],
+      "token_size": "large",
+      "border_color": "black",
+      "monster_type": "avatar",
+      "dimension": "triangle",
+      "frequency": 1,
+      "source": "community/compilation (verify expansion)",
+      "art_asset": "dark_pharaoh.png"
+    }
+  ]
+}

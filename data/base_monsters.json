@@ -1,0 +1,135 @@
+{
+  "monsters": [
+    {
+      "name": "Cultist",
+      "expansion": "Base",
+      "awareness": -2,
+      "horror": { "modifier": -2, "sanity_damage": 1 },
+      "combat": { "modifier": -1, "stamina_damage": 1 },
+      "toughness": 1,
+      "movement": "Normal",
+      "special": []
+    },
+    {
+      "name": "Ghoul",
+      "expansion": "Base",
+      "awareness": -1,
+      "horror": { "modifier": -1, "sanity_damage": 1 },
+      "combat": { "modifier": 0, "stamina_damage": 1 },
+      "toughness": 1,
+      "movement": "Normal",
+      "special": []
+    },
+    {
+      "name": "Maniac",
+      "expansion": "Base",
+      "awareness": -1,
+      "horror": { "modifier": -1, "sanity_damage": 1 },
+      "combat": { "modifier": 0, "stamina_damage": 2 },
+      "toughness": 1,
+      "movement": "Fast",
+      "special": ["Ambush"]
+    },
+    {
+      "name": "Warlock",
+      "expansion": "Base",
+      "awareness": -2,
+      "horror": { "modifier": -1, "sanity_damage": 1 },
+      "combat": { "modifier": -2, "stamina_damage": 1 },
+      "toughness": 1,
+      "movement": "Normal",
+      "special": ["Magical Resistance"]
+    },
+    {
+      "name": "Ghost",
+      "expansion": "Base",
+      "awareness": -3,
+      "horror": { "modifier": -3, "sanity_damage": 2 },
+      "combat": { "modifier": -2, "stamina_damage": 1 },
+      "toughness": 1,
+      "movement": "Flying",
+      "special": ["Physical Immunity"]
+    },
+    {
+      "name": "Witch",
+      "expansion": "Base",
+      "awareness": -2,
+      "horror": { "modifier": -1, "sanity_damage": 1 },
+      "combat": { "modifier": -2, "stamina_damage": 1 },
+      "toughness": 1,
+      "movement": "Normal",
+      "special": ["Physical Resistance"]
+    },
+    {
+      "name": "Zombie",
+      "expansion": "Base",
+      "awareness": -2,
+      "horror": { "modifier": -2, "sanity_damage": 1 },
+      "combat": { "modifier": -3, "stamina_damage": 1 },
+      "toughness": 1,
+      "movement": "Slow",
+      "special": []
+    },
+    {
+      "name": "Vampire",
+      "expansion": "Base",
+      "awareness": -2,
+      "horror": { "modifier": -2, "sanity_damage": 2 },
+      "combat": { "modifier": -3, "stamina_damage": 2 },
+      "toughness": 2,
+      "movement": "Fast",
+      "special": ["Magical Resistance", "Nightmarish(1)"]
+    },
+    {
+      "name": "Dark Young",
+      "expansion": "Base",
+      "awareness": -2,
+      "horror": { "modifier": -3, "sanity_damage": 3 },
+      "combat": { "modifier": -4, "stamina_damage": 3 },
+      "toughness": 3,
+      "movement": "Normal",
+      "special": ["Physical Resistance", "Overwhelming(1)"]
+    },
+    {
+      "name": "Star Spawn",
+      "expansion": "Base",
+      "awareness": -3,
+      "horror": { "modifier": -3, "sanity_damage": 3 },
+      "combat": { "modifier": -5, "stamina_damage": 3 },
+      "toughness": 4,
+      "movement": "Flying",
+      "special": ["Magical Immunity", "Physical Resistance", "Endless"]
+    },
+    {
+      "name": "Hound of Tindalos",
+      "expansion": "Base",
+      "awareness": -2,
+      "horror": { "modifier": -2, "sanity_damage": 2 },
+      "combat": { "modifier": -3, "stamina_damage": 2 },
+      "toughness": 2,
+      "movement": "Fast",
+      "special": ["Magical Resistance"]
+    },
+    {
+      "name": "Mi-Go",
+      "expansion": "Base",
+      "awareness": -2,
+      "horror": { "modifier": -1, "sanity_damage": 1 },
+      "combat": { "modifier": -2, "stamina_damage": 1 },
+      "toughness": 2,
+      "movement": "Flying",
+      "special": []
+    },
+    {
+      "name": "Shoggoth",
+      "expansion": "Base",
+      "awareness": -2,
+      "horror": { "modifier": -2, "sanity_damage": 3 },
+      "combat": { "modifier": -6, "stamina_damage": 3 },
+      "toughness": 4,
+      "movement": "Slow",
+      "special": ["Physical Resistance", "Overwhelming(1)"]
+    }
+  ]
+}
+
