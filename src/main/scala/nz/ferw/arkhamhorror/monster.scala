@@ -1,5 +1,3 @@
-
-
 case class Monster(
   name: String,
   expansion: String,
