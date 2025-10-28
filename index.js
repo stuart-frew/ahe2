@@ -1,5 +1,5 @@
 const width = 928;
-const height = 600;
+const height = 1024;
 
 axios
   .get("src/main/resources/data/locations.json")
@@ -25,7 +25,7 @@ axios
 
     const nodes = locationNodes.concat(neighbourhoodNodes);
 
-    const links = board.neighborhoods.flatMap((n) => {
+    const locationLinks = board.neighborhoods.flatMap((n) => {
       return n.locations.map((l) => {
         return {
           source: l.name,
@@ -33,6 +33,17 @@ axios
         };
       });
     });
+
+    const neighborhoodLinks = board.relationships.flatMap( r => {
+      return r.to.map(t => {
+        return {
+          source: r.from,
+          target: t
+        }
+      })
+    })
+
+    const links = locationLinks.concat(neighborhoodLinks)
 
     const color = d3.scaleOrdinal(d3.schemeCategory10);
 
@@ -53,7 +64,7 @@ axios
       .attr("width", width)
       .attr("height", height)
       .attr("viewBox", [-width / 2, -height / 2, width, height])
-      .attr("style", "max-width: 100%; height: auto;");
+      .attr("style", "max-width: 100%; height: auto; font: 12px sans-serif;");
 
     // Add a line for each link, and a circle for each node.
     const link = svg
@@ -69,13 +80,21 @@ axios
       .append("g")
       .attr("stroke", "#fff")
       .attr("stroke-width", 1.5)
-      .selectAll("circle")
+      .selectAll(".node")
       .data(nodes)
-      .join("circle")
-      .attr("r", 5)
-      .attr("fill", (d) => color(getColorIndex(d, board)));
+      .enter()
+      .append("g")
 
-    node.append("title").text((d) => d.id);
+
+    node.append("circle")
+      .attr("r", 5)
+      .attr("fill", (d) => color(getColorIndex(d, board)))
+     
+    node.append("text")
+    .attr("x", 12)   // offset to the right of the circle
+    .attr("y", 3)    // vertical centering
+    .text(d => d.id)
+    .attr("stroke", (d) => color(getColorIndex(d, board)))
 
     // Add a drag behavior.
     node.call(
@@ -94,7 +113,7 @@ axios
         .attr("x2", (d) => d.target.x)
         .attr("y2", (d) => d.target.y);
 
-      node.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
+      node.attr("transform", d => `translate(${d.x},${d.y})`);
     });
 
     document.getElementById("board").appendChild(svg.node());
@@ -123,13 +142,14 @@ function dragended(event) {
 }
 
 function getColorIndex(node, board) {
-  board.neighborhoods.findIndex((n) => {
-    if (n.type == "location") {
-      return n.neighborhood == node.id;
+  index = board.neighborhoods.findIndex((n) => {
+    if (node.type == "location") {
+      return n.locations.find( l => { return l.name == node.id });
     } else {
       return n.name == node.id;
     }
-  });
+  })
+  return index
 }
 // When this cell is re-run, stop the previous simulation. (This doesn’t
 // really matter since the target alpha is zero and the simulation will

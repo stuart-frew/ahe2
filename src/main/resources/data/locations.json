@@ -142,56 +142,56 @@
 
   "relationships": [
     {
-      "from": "Downtown Streets",
+      "from": "Downtown",
       "to": [
-        "Easttown Streets",
-        "Merchant District Streets",
-        "Rivertown Streets"
+        "Easttown",
+        "Merchant District",
+        "Rivertown"
       ]
     },
     {
-      "from": "Easttown Streets",
-      "to": ["Downtown Streets", "Rivertown Streets"]
+      "from": "Easttown",
+      "to": ["Downtown", "Rivertown"]
     },
     {
-      "from": "Merchant District Streets",
-      "to": ["Downtown Streets", "Northside Streets", "Rivertown Streets"]
+      "from": "Merchant District",
+      "to": ["Downtown", "Northside", "Rivertown"]
     },
     {
-      "from": "University Streets",
-      "to": ["Northside Streets", "Uptown Streets"]
+      "from": "Miskatonic University",
+      "to": ["Northside", "Uptown"]
     },
     {
-      "from": "Northside Streets",
-      "to": ["Merchant District Streets", "University Streets"]
+      "from": "Northside",
+      "to": ["Merchant District", "Miskatonic University"]
     },
     {
-      "from": "Rivertown Streets",
-      "to": ["Downtown Streets", "Easttown Streets", "Southside Streets"]
+      "from": "Rivertown",
+      "to": ["Downtown", "Easttown", "Southside"]
     },
     {
-      "from": "Southside Streets",
-      "to": ["Rivertown Streets", "French Hill Streets"]
+      "from": "Southside",
+      "to": ["Rivertown", "French Hill"]
     },
     {
-      "from": "French Hill Streets",
-      "to": ["Southside Streets", "Uptown Streets"]
+      "from": "French Hill",
+      "to": ["Southside", "Uptown"]
     },
     {
-      "from": "Uptown Streets",
-      "to": ["University Streets", "French Hill Streets"]
+      "from": "Uptown",
+      "to": ["Miskatonic University", "French Hill"]
     },
 
-    { "from": "Northside:Train Station", "to": ["Dunwich Streets"] },
-    { "from": "Dunwich Streets", "to": ["Northside:Train Station"] },
+    { "from": "Train Station", "to": ["Dunwich"] },
+    { "from": "Dunwich", "to": ["Train Station"] },
 
     {
-      "from": "Kingsport Streets",
-      "to": ["Merchant District Streets", "Rivertown Streets"]
+      "from": "Kingsport",
+      "to": ["Merchant District", "Rivertown"]
     },
-    { "from": "Merchant District Streets", "to": ["Kingsport Streets"] },
+    { "from": "Merchant District", "to": ["Kingsport"] },
 
-    { "from": "Innsmouth Streets", "to": ["Northside:Train Station"] },
-    { "from": "Northside:Train Station", "to": ["Innsmouth Streets"] }
+    { "from": "Innsmouth", "to": ["Train Station"] },
+    { "from": "Train Station", "to": ["Innsmouth"] }
   ]
 }
