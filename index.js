@@ -73,17 +73,7 @@ axios
       .data(nodes)
       .join("circle")
       .attr("r", 5)
-      .attr("fill", (d) =>
-        color(
-          board.neighborhoods.findIndex((n) => {
-            if (d.type == "location") {
-              return d.neighborhood == n.name;
-            } else {
-              return n.name == d.name;
-            }
-          }),
-        ),
-      );
+      .attr("fill", (d) => color(getColorIndex(d, board)));
 
     node.append("title").text((d) => d.id);
 
@@ -132,6 +122,15 @@ function dragended(event) {
   event.subject.fy = null;
 }
 
+function getColorIndex(node, board) {
+  board.neighborhoods.findIndex((n) => {
+    if (n.type == "location") {
+      return n.neighborhood == node.id;
+    } else {
+      return n.name == node.id;
+    }
+  });
+}
 // When this cell is re-run, stop the previous simulation. (This doesn’t
 // really matter since the target alpha is zero and the simulation will
 // stop naturally, but it’s a good practice.)
