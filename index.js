@@ -1,5 +1,5 @@
-const width = 928;
-const height = 1024;
+const width = "100%";
+const height = "100%";
 
 axios
   .get("src/main/resources/data/locations.json")
@@ -38,7 +38,8 @@ axios
       return r.to.map(t => {
         return {
           source: r.from,
-          target: t
+          target: t,
+          type: "neighborhood"
         }
       })
     })
@@ -50,21 +51,26 @@ axios
     // Create a simulation with several forces.
     const simulation = d3
       .forceSimulation(nodes)
-      .force(
-        "link",
-        d3.forceLink(links).id((d) => d.id),
-      )
-      .force("charge", d3.forceManyBody())
+      .force("link", d3.forceLink(links).id(d => d.id ).distance(d => {
+        if ( d.type == "neighborhood" ) {
+          return 100
+        } else {
+          return 40
+        }
+      }))
+      .force("charge", d3.forceManyBody().strength(-8))
       .force("x", d3.forceX())
       .force("y", d3.forceY());
 
     // Create the SVG container.
     const svg = d3
       .create("svg")
-      .attr("width", width)
-      .attr("height", height)
-      .attr("viewBox", [-width / 2, -height / 2, width, height])
+      .attr("width", "100%")
+      .attr("height", "100%")
+      .attr("preserveAspectRatio", "xMinYMin meet")
+      .attr("viewBox", "-200, -200, 500, 500")
       .attr("style", "max-width: 100%; height: auto; font: 12px sans-serif;");
+ 
 
     // Add a line for each link, and a circle for each node.
     const link = svg
@@ -93,9 +99,11 @@ axios
     node.append("text")
     .attr("x", 12)   // offset to the right of the circle
     .attr("y", 3)    // vertical centering
+    .attr("stroke-width", 0.5)
     .text(d => d.id)
     .attr("stroke", (d) => color(getColorIndex(d, board)))
-
+    .attr("class", "name")
+  
     // Add a drag behavior.
     node.call(
       d3
