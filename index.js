@@ -6,6 +6,10 @@ expansions = ["Kingsport", "Dunwich", "Innsmouth"];
 axios
   .get("src/main/resources/data/locations.json")
   .then((response) => {
+    const container = document.getElementById("board");
+    const width = container.clientWidth;
+    const height = container.clientHeight;
+
     const board = response.data;
 
     const locationNodes = board.neighborhoods.flatMap((n) =>
@@ -18,16 +22,11 @@ axios
       }),
     );
 
-    const container = document.getElementById("board");
-    const width = container.clientWidth;
-    const height = container.clientHeight;
-
-    console.log("width:", width, " height:", height);
-
     const neighbourhoodNodes = board.neighborhoods.map((n) => {
       return {
         id: n.name,
         type: "neighborhood",
+        expansion: n.expansion,
       };
     });
 
@@ -65,25 +64,21 @@ axios
           .forceLink(links)
           .id((d) => d.id)
           .distance((d) => {
-            console.log("d", d);
             if (
-              (expansions.includes(d.source.id) ||
-                expansions.includes(d.target.id)) &&
-              d.source != "location"
+              d.source.type == "neighborhood" &&
+              d.target.type == "neighborhood"
             ) {
-              return 500;
-            } else if (d.source.type == "neighborhood") {
-              return 100;
-            } else {
-              return 50;
+              if (d.source.expansion != d.target.expansion) {
+                return 500;
+              } else {
+                return 100;
+              }
             }
+            return 50;
           }),
       )
-      .force("charge", d3.forceManyBody().strength(-8))
-      .force("collide", d3.forceCollide(10))
-      .force("x", d3.forceX())
-      .force("center", d3.forceCenter(width / 2, height / 2))
-      .force("y", d3.forceY());
+      .force("charge", d3.forceManyBody().strength(-50))
+      .force("center", d3.forceCenter(width / 2, height / 2));
 
     // Create the SVG container.
     const svg = d3
